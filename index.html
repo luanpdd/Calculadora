@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Serviços</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div class="main-container" role="main">
+      <div class="card" aria-labelledby="card-title">
+        <h1 id="card-title"><i class="fas fa-calculator"></i> Calculadora de Serviços</h1>
+        <form id="calcForm" aria-describedby="form-description">
+          <p id="form-description">Preencha os campos abaixo para calcular o preço final do serviço.</p>
+          <div class="form-group">
+            <label for="fixedCosts">Custos Fixos (R$): <span class="required">*</span></label>
+            <input type="number" id="fixedCosts" aria-required="true" aria-describedby="fixedCostsError" required="">
+            <span class="error" id="fixedCostsError" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="hourRate">Valor da Hora de Trabalho (R$): <span class="required">*</span></label>
+            <input type="number" id="hourRate" aria-required="true" aria-describedby="hourRateError" required="">
+            <span class="error" id="hourRateError" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="hoursWorked">Horas Trabalhadas: <span class="required">*</span></label>
+            <input type="number" id="hoursWorked" aria-required="true" aria-describedby="hoursWorkedError" required="">
+            <span class="error" id="hoursWorkedError" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="profitMargin">Margem de Lucro (%): <span class="required">*</span></label>
+            <input type="number" id="profitMargin" aria-required="true" aria-describedby="profitMarginError" required="">
+            <span class="error" id="profitMarginError" aria-live="polite"></span>
+          </div>
+          <button type="submit" aria-label="Calcular"><i class="fas fa-check"></i> Calcular</button>
+        </form>
+        <div class="result hidden" id="result" aria-live="polite"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+
+  </body>
+
+</html>
